@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User car view</title>
+    <link href="static/css/index.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <th:block th:include="static/fragment/head :: head"></th:block>
+
+</head>
+<body>
+<div th:replace="header :: content"></div>
+
+<div class="container mt-5 mb-5" th:each="car:${car}">
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-10">
+            <div class="row p-2 bg-white border rounded">
+                <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" th:src="${car.image}"></div>
+                <div class="col-md-6 mt-1">
+                    <h5 th:text="${car.mark}"></h5> <h5 th:text="${car.model}"></h5>
+                    <div class="d-flex flex-row">
+                        <div class="ratings mr-2"></i></div><span th:text="'Топливо ' +${car.fuel}"></span>
+                    </div>
+                    <div class="mt-1 mb-1 spec-1"><span class="dot"></span><span th:text="'Цвет ' +${car.color}"></span><span class="dot"></span></div>
+                    <div class="mt-1 mb-1 spec-1"><span class="dot"></span><span th:text="'Год ' + ${car.year}"></span><span class="dot"></span><br></div>
+                    <p class="text-justify text-truncate para mb-0"><br></p>
+                </div>
+                <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+                    <div class="d-flex flex-row align-items-center">
+                        <h4 class="mr-1" th:text="${car.price} + '$'"></h4><span class="strike-text"></span>
+                    </div>
+                    <h6 class="text-success"></h6>
+                    <form action="#" method="post" th:action="@{/car/{id}/delete(id=${car.id})}">
+                        <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm" type="submit">Изменить</button></div>
+                    </form>
+                    <form action="#" method="post" th:action="@{/car/{id}/delete(id=${car.id})}">
+                        <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm" type="submit">Удалить объявление</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

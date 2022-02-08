@@ -1,25 +1,13 @@
-package com.example.car_shop.entity;
+package com.example.car_shop.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
-
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-@Entity
-public class Car {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "car_id")
-    private Long id;
-
-    @ManyToOne
-    @JoinColumn
-    private User creator;
+@NoArgsConstructor
+public class CarDto {
 
     private String mark;
     private String model;

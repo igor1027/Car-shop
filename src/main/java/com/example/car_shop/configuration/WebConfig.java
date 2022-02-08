@@ -13,18 +13,18 @@ import org.springframework.web.servlet.view.UrlBasedViewResolver;
 
 import java.util.List;
 
-@Configuration
-@EnableWebMvc
-@ComponentScan(basePackages = "com.example.car_shop")
+//@Configuration
+//@EnableWebMvc
+//@ComponentScan(basePackages = "com.example.car_shop")
 public class WebConfig implements WebMvcConfigurer {
 
-    @Bean
-    ViewResolver viewResolver(){
-        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-        resolver.setPrefix("/templates/");
-        resolver.setSuffix(".html");
-        return resolver;
-    }
+//    @Bean
+//    ViewResolver viewResolver(){
+//        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
+//        resolver.setPrefix("/templates/");
+//        resolver.setSuffix(".html");
+//        return resolver;
+//    }
 
 
 

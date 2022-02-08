@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link as="font" crossorigin="anonymous"
+          href="https://static-new.av.by/asset/app/font/opensans-regular-latin.woff2" rel="preload"
+          type="font/woff2">
+    <link as="font" crossorigin="anonymous"
+          href="https://static-new.av.by/asset/app/font/opensans-regular-cyrillic.woff2" rel="preload"
+          type="font/woff2">
+    <link as="font" crossorigin="anonymous" href="https://static-new.av.by/asset/app/font/opensans-bold-latin.woff2"
+          rel="preload" type="font/woff2">
+    <link as="font" crossorigin="anonymous"
+          href="https://static-new.av.by/asset/app/font/opensans-bold-cyrillic.woff2" rel="preload"
+          type="font/woff2">
+    <link href="https://static-new.av.by/asset/app/css/main.css?674648c8d4af3942e16aa7dbfcbafc104a228265"
+          rel="stylesheet">
+    <link href="https://static-new.av.by/asset/app/image/favicon/favicon.svg" rel="icon" sizes="any"
+          type="image/svg+xml">
+    <link href="https://static-new.av.by/asset/app/image/favicon/favicon.ico" rel="shortcut icon">
+    <link href="https://static-new.av.by/asset/app/image/favicon/apple-touch-icon.png" rel="apple-touch-icon">
+    <link color="#1e9de7" href="https://static-new.av.by/asset/app/image/favicon/safari-pinned-tab.svg"
+          rel="mask-icon">
+    <link href="https://static-new.av.by/asset/app/image/favicon/android-chrome-192x192.png" rel="icon"
+          sizes="192x192">
+    <link href="https://static-new.av.by/asset/app/image/favicon/site.webmanifest" rel="manifest">
+    <link href="https://static-new.av.by/asset/app/image/favicon/tableau.json" rel="yandex-tableau-widget">
+    <th:block th:include="static/fragment/head :: head"></th:block>
+
+</head>
+<body>
+<div th:replace="header :: content"></div>
+
+<form action="#" th:action="@{/car/{id}(id=${car.id})}" th:object="${car}">
+    <div id="__next">
+        <div class="page">
+            <div class="break">
+                <main class="main">
+                    <div class="row gx-5">
+
+                    </div>
+                    <div class="layout layout--offset-40" >
+                        <div class="overlay-container">
+                            <div class="card gx-5">
+                                <div class="card__header"><h1 class="card__title" th:text="'Продается '+${car.mark}+' '+${car.model}"></h1>
+                                </div>
+                                <div class="card__wrap">
+                                    <div class="card__gallery">
+                                        <div class="gallery">
+                                            <div class="gallery__stage"
+                                                 style="overflow: hidden; user-select: none;">
+                                                <div class="gallery__stage-shaft"
+                                                     style="font-size: 0px; transform: translate3d(0px, 0px, 0px); white-space: nowrap; transition-duration: 300ms;">
+                                                    <div class="gallery__frame" style="display: inline-block;"><img
+                                                            th:src="${car.image}">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card__summary">
+                                        <div class="card__price">
+                                            <div class="card__price-primary" th:text="${car.price}+' $'"></div>
+                                        </div>
+                                        <div class="card__about">
+                                            <div class="card__params" th:text="'Год выпуска '+${car.year}+' г.'"></div>
+                                            <div class="card__params" th:text="'Пробег '+${car.kilometers}+' км.'"></div>
+                                            <div class="card__params" th:text="'Цвет кузова '+ ${car.color}+' '"></div>
+                                            <div class="card__params" th:text="'Объем двигателя '+${car.engineCapacity}+' л.'"></div>
+                                            <div class="card__params" th:text="'Тип топлива'+${car.fuel}"></div>
+                                            <div class="card__description" th:text="${car.body}"></div>
+                                        </div>
+                                        <div class="card__contact">
+                                            <button class="button button--default button--block" type="button"><span
+                                                    class="button__text" th:text="${car.creator.name}"></span></button>
+                                            <button class="button button--secondary button--block"
+                                                    type="button"><span
+                                                    class="button__text" th:text="${car.creator.phone}"></span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card__comment"><h4 class="card__comment-title">Описание</h4>
+                                    <div class="card__comment-body">
+                                        <div class="card__comment-text" th:text="${car.description}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="break break--zone936">
+                                    <div id="adfox_1563281840343421"></div>
+                                </div>
+                                <div class="card__exchange"><h4 class="card__exchange-title">Обмен не
+                                    интересует</h4>
+                                </div>
+                                <div class="card__options">
+                                    <div class="card__options-wrap">
+                                        <div class="card__options-section"><h4 class="card__options-category">
+                                            Экстерьер</h4>
+                                            <ul class="card__options-list">
+                                                <li class="card__options-item">легкосплавные диски</li>
+                                            </ul>
+                                        </div>
+                                        <div class="card__options-section"><h4 class="card__options-category">
+                                            Системы
+                                            безопасности</h4>
+                                            <ul class="card__options-list">
+                                                <li class="card__options-item">ABS</li>
+                                                <li class="card__options-item">ESP</li>
+                                                <li class="card__options-item">антипробуксовочная</li>
+                                                <li class="card__options-item">иммобилайзер</li>
+                                            </ul>
+                                        </div>
+                                        <div class="card__options-section"><h4 class="card__options-category">
+                                            Подушки</h4>
+                                            <ul class="card__options-list">
+                                                <li class="card__options-item">передние</li>
+                                                <li class="card__options-item">боковые</li>
+                                                <li class="card__options-item">задние</li>
+                                            </ul>
+                                        </div>
+                                        <div class="card__options-section"><h4 class="card__options-category">
+                                            Системы
+                                            помощи</h4>
+                                            <ul class="card__options-list">
+                                                <li class="card__options-item">датчик дождя</li>
+                                                <li class="card__options-item">камера заднего вида</li>
+                                                <li class="card__options-item">парктроники</li>
+                                                <li class="card__options-item">контроль мертвых зон на зеркалах</li>
+                                            </ul>
+                                        </div>
+                                        <div class="card__options-section"><h4 class="card__options-category">
+                                            Интерьер</h4>
+                                            <ul class="card__options-list">
+                                                <li class="card__options-item">комби</li>
+                                                <li class="card__options-item">комбинированные материалы</li>
+                                                <li class="card__options-item">панорамная крыша</li>
+                                                <li class="card__options-item">люк</li>
+                                            </ul>
+                                        </div>
+                                        <div class="card__options-section"><h4 class="card__options-category">
+                                            Комфорт</h4>
+                                            <ul class="card__options-list">
+                                                <li class="card__options-item">круиз-контроль</li>
+                                                <li class="card__options-item">управление мультимедиа с руля</li>
+                                                <li class="card__options-item">передние электро-стеклоподъёмники
+                                                </li>
+                                                <li class="card__options-item">задние электро-стеклоподъёмники</li>
+                                            </ul>
+                                        </div>
+                                        <div class="card__options-section"><h4 class="card__options-category">
+                                            Обогрев</h4>
+                                            <ul class="card__options-list">
+                                                <li class="card__options-item">сидений</li>
+                                                <li class="card__options-item">зеркал</li>
+                                                <li class="card__options-item">руля</li>
+                                            </ul>
+                                        </div>
+                                        <div class="card__options-section"><h4 class="card__options-category">
+                                            Климат</h4>
+                                            <ul class="card__options-list">
+                                                <li class="card__options-item">климат-контроль</li>
+                                                <li class="card__options-item">кондиционер</li>
+                                            </ul>
+                                        </div>
+                                        <div class="card__options-section"><h4 class="card__options-category">
+                                            Мультимедиа</h4>
+                                            <ul class="card__options-list">
+                                                <li class="card__options-item">AUX или iPod</li>
+                                                <li class="card__options-item">Bluetooth</li>
+                                                <li class="card__options-item">USB</li>
+                                                <li class="card__options-item">мультимедийный экран</li>
+                                                <li class="card__options-item">штатная навигация</li>
+                                            </ul>
+                                        </div>
+                                        <div class="card__options-section"><h4 class="card__options-category">
+                                            Фары</h4>
+                                            <ul class="card__options-list">
+                                                <li class="card__options-item">ксеноновые</li>
+                                                <li class="card__options-item">противотуманные</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+</html>

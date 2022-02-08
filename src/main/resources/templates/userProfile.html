@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User profile</title>
+    <th:block th:include="static/fragment/head :: head"></th:block>
+
+</head>
+<body>
+<div th:replace="header :: content"></div>
+
+<div class="container" style="padding-top: 50px;">
+    <div class="main-body">
+        <div class="row gutters-sm">
+            <form action="#" th:action="@{/profile}" th:object="${user}">
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex flex-column align-items-center text-center">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+                            <div class="mt-3">
+                                <h4 th:utext="${user.name}"></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">First name</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <h5 th:utext="${user.name}"></h5>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Last name</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <h5 th:utext="${user.lastname}"></h5>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Mobile</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <h5 th:utext="${user.phone}"></h5>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Email</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <h5 th:utext="${user.email}"></h5>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <a class="btn btn-primary" href="/user/changerUser" role="button">Change profile</a><a class="btn btn-primary" href="/view_my_car" role="button">Show my ads</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

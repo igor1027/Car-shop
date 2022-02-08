@@ -13,9 +13,6 @@ import javax.persistence.Table;
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
-@NoArgsConstructor
-@AllArgsConstructor
-@Data
 @Table
 public class Role {
 
@@ -28,4 +25,19 @@ public class Role {
 //    public String getAuthority() {
 //        return name();
 //    }
+
+    public Role() {
+    }
+
+    public Role(String roleName) {
+        this.roleName = roleName;
+    }
+
+    public String getRoleName() {
+        return roleName;
+    }
+
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
+    }
 }

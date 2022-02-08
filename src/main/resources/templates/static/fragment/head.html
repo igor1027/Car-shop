@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head th:fragment="head">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link as="font" crossorigin="anonymous"
+          href="https://static-new.av.by/asset/app/font/montserrat-extrabold-latin.woff2" rel="preload"
+          type="font/woff2">
+    <link as="font" crossorigin="anonymous"
+          href="https://static-new.av.by/asset/app/font/montserrat-extrabold-cyrillic.woff2" rel="preload"
+          type="font/woff2">
+    <link as="font" crossorigin="anonymous" href="https://static-new.av.by/asset/app/font/opensans-semibold-latin.woff2"
+          rel="preload" type="font/woff2">
+    <link as="font" crossorigin="anonymous"
+          href="https://static-new.av.by/asset/app/font/opensans-semibold-cyrillic.woff2" rel="preload"
+          type="font/woff2">
+    <link as="font" crossorigin="anonymous" href="https://static-new.av.by/asset/app/font/opensans-regular-latin.woff2"
+          rel="preload" type="font/woff2">
+    <link as="font" crossorigin="anonymous"
+          href="https://static-new.av.by/asset/app/font/opensans-regular-cyrillic.woff2" rel="preload"
+          type="font/woff2">
+    <link as="font" crossorigin="anonymous" href="https://static-new.av.by/asset/app/font/opensans-bold-latin.woff2"
+          rel="preload" type="font/woff2">
+    <link as="font" crossorigin="anonymous" href="https://static-new.av.by/asset/app/font/opensans-bold-cyrillic.woff2"
+          rel="preload" type="font/woff2">
+    <link href="https://static-new.av.by/asset/app/css/main.css?674648c8d4af3942e16aa7dbfcbafc104a228265"
+          rel="stylesheet">
+<!--    <link href="https://static-new.av.by/asset/app/image/favicon/favicon.svg" rel="icon" sizes="any"-->
+<!--          type="image/svg+xml">-->
+<!--    <link href="https://static-new.av.by/asset/app/image/favicon/favicon.ico" rel="shortcut icon">-->
+<!--    <link href="https://static-new.av.by/asset/app/image/favicon/apple-touch-icon.png" rel="apple-touch-icon">-->
+<!--    <link color="#1e9de7" href="https://static-new.av.by/asset/app/image/favicon/safari-pinned-tab.svg" rel="mask-icon">-->
+<!--    <link href="https://static-new.av.by/asset/app/image/favicon/android-chrome-192x192.png" rel="icon" sizes="192x192">-->
+<!--    <link href="https://static-new.av.by/asset/app/image/favicon/site.webmanifest" rel="manifest">-->
+<!--    <link href="https://static-new.av.by/asset/app/image/favicon/tableau.json" rel="yandex-tableau-widget">-->
+<!--    <script async="" src="//static.ads-twitter.com/uwt.js"></script>-->
+<!--    <script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script>-->
+<!--    <script type="text/javascript" async="" id="topmailru-code" src="https://top-fwz1.mail.ru/js/code.js"></script>-->
+<!--    <script type="text/javascript" async="" src="https://rum.u-team.by/matomo.js"></script>-->
+<!--    <script async="async" defer="defer" src="https://gaby.hit.gemius.pl/xgemius.js"></script>-->
+<!--    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>-->
+<!--    <script type="text/javascript" async=""-->
+<!--            src="https://www.googletagmanager.com/gtag/js?id=G-GWM6BXJZNK&amp;l=dataLayer&amp;cx=c"></script>-->
+<!--    <script async="async" defer="defer" src="https://gaby.hit.gemius.pl/xgemius.js"></script>-->
+<!--    <script async="" src="https://mc.yandex.ru/metrika/tag.js"></script>-->
+<!--    <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-M6KM7CJ"></script>-->
+<!--    <script>window.yaContextCb = window.yaContextCb || []</script>-->
+<!--    <script async="" src="https://yandex.ru/ads/system/context.js"></script>-->
+<!--    <script>-->
+<!--        &lt;!&ndash;-->
+<!--        Google-->
+<!--        Tag-->
+<!--        Manager &ndash;&gt;-->
+<!--            (function (w, d, s, l, i) {-->
+<!--                w[l] = w[l] || [];-->
+<!--                w[l].push({-->
+<!--                    'gtm.start':-->
+<!--                        new Date().getTime(), event: 'gtm.js'-->
+<!--                });-->
+<!--                var f = d.getElementsByTagName(s)[0],-->
+<!--                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';-->
+<!--                j.async = true;-->
+<!--                j.src =-->
+<!--                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl;-->
+<!--                f.parentNode.insertBefore(j, f);-->
+<!--            })(window, document, 'script', 'dataLayer', 'GTM-M6KM7CJ');-->
+<!--        &lt;!&ndash; End Google Tag Manager &ndash;&gt;-->
+<!--    </script>-->
+<!--    <script>-->
+<!--        &lt;!&ndash;-->
+<!--        Yandex.Metrika-->
+<!--        counter &ndash;&gt;-->
+<!--            (function (m, e, t, r, i, k, a) {-->
+<!--                m[i] = m[i] || function () {-->
+<!--                    (m[i].a = m[i].a || []).push(arguments)-->
+<!--                };-->
+<!--                m[i].l = 1 * new Date();-->
+<!--                k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)-->
+<!--            })-->
+<!--            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");-->
+
+<!--        ym(55574611, "init", {-->
+<!--            defer: true,-->
+<!--            clickmap: true,-->
+<!--            trackLinks: true,-->
+<!--            accurateTrackBounce: true-->
+<!--        });-->
+<!--        &lt;!&ndash; /Yandex.Metrika counter &ndash;&gt;-->
+<!--    </script>-->
+<!--    <script>-->
+<!--        &lt;!&ndash;//&ndash;&gt;<![CDATA[//><!—-->
+
+
+<!--        var pp_gemius_extraparameters = new Array('lan=EN', 'key=keyword', 'subs=subsection', 'free=free_field');-->
+
+<!--        // lines below shouldn't be edited-->
+<!--        function gemius_pending(i) {-->
+<!--            window[i] = window[i] || function () {-->
+<!--                var x = window[i + '_pdata'] = window[i + '_pdata'] || [];-->
+<!--                x[x.length] = arguments;-->
+<!--            };-->
+<!--        };-->
+<!--        gemius_pending('gemius_hit');-->
+<!--        gemius_pending('gemius_event');-->
+<!--        gemius_pending('pp_gemius_hit');-->
+<!--        gemius_pending('pp_gemius_event');-->
+
+<!--        (function (d, t) {-->
+<!--            try {-->
+<!--                var gt = d.createElement(t), s = d.getElementsByTagName(t)[0],-->
+<!--                    l = 'http' + ((location.protocol == 'https:') ? 's' : '');-->
+<!--                gt.setAttribute('async', 'async');-->
+<!--                gt.setAttribute('defer', 'defer');-->
+<!--                gt.src = l + '://gaby.hit.gemius.pl/xgemius.js';-->
+<!--                s.parentNode.insertBefore(gt, s);-->
+<!--            } catch (e) {-->
+<!--            }-->
+<!--        })(document, 'script');-->
+
+<!--        //&ndash;&gt;<!]]>-->
+<!--    </script>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta content="width=1260" name="viewport">-->
+<!--    <title>Lexus RX IV, 2017 г., 3.5 л., бензин, автомат, купить в Минске - цена 43500 $, фото, характеристики. av.by —-->
+<!--        объявления о продаже автомобилей. 100726863</title>-->
+<!--    <script async="" charset="UTF-8" src="https://connector.finup.lv/connector_7715788c2712a125.js"></script>-->
+<!--    <meta content="Автомобиль в отличном состоянии. Серый кожаный салон. Подогрев, вентиляция сидений. Подогрев руля. Люк. Контроль мертвых зон, удержание полосы,..."-->
+<!--          property="og:description">-->
+<!--    <meta content="https://avcdn.av.by/advertbig/0000/4918/3771.jpeg" property="og:image">-->
+<!--    <meta content="Продается Lexus RX IV, 2017 г.,бензин, 3.5 л., автомат. Находится в Минске - цена 43500 $"-->
+<!--          property="og:title">-->
+<!--    <meta content="Объявление о продаже Lexus RX IV, 2017 г., бензин, 3.5 л., автомат, купить в Минске. Цена и контакты продавца."-->
+<!--          name="description">-->
+<!--    <meta content="Lexus RX IV, 2017 г., продажа, купить, объявления, Минск" name="keywords">-->
+<!--    <meta content="summary_large_image" property="twitter:card">-->
+<!--    <meta name="next-head-count" content="10">-->
+<!--    <noscript data-n-css=""></noscript>-->
+<!--    <script defer="" crossorigin="anonymous" nomodule=""-->
+<!--            src="https://static-new.av.by/app/_next/static/chunks/polyfills-8a258ffc662a84a7bbe9.js"></script>-->
+<!--    <script src="https://static-new.av.by/app/_next/static/chunks/webpack-e33d2d64705e8bc6db57.js" defer=""-->
+<!--            crossorigin="anonymous"></script>-->
+<!--    <script src="https://static-new.av.by/app/_next/static/chunks/framework-56dc96a11889c53d8326.js" defer=""-->
+<!--            crossorigin="anonymous"></script>-->
+<!--    <script src="https://static-new.av.by/app/_next/static/chunks/main-e28bd137b37b7c6fe528.js" defer=""-->
+<!--            crossorigin="anonymous"></script>-->
+<!--    <script src="https://static-new.av.by/app/_next/static/chunks/pages/_app-046db3517c3f35eeff86.js" defer=""-->
+<!--            crossorigin="anonymous"></script>-->
+<!--    <script src="https://static-new.av.by/app/_next/static/chunks/6133-e9d7b5771eb4d70b77c2.js" defer=""-->
+<!--            crossorigin="anonymous"></script>-->
+<!--    <script src="https://static-new.av.by/app/_next/static/chunks/pages/%5B%5B...landingOrIndexPage%5D%5D-9c8a00963c64e56280ac.js"-->
+<!--            defer="" crossorigin="anonymous"></script>-->
+<!--    <script src="https://static-new.av.by/app/_next/static/_mfBbJmGW7sGluxMjHpp6/_buildManifest.js" defer=""-->
+<!--            crossorigin="anonymous"></script>-->
+<!--    <script src="https://static-new.av.by/app/_next/static/_mfBbJmGW7sGluxMjHpp6/_ssgManifest.js" defer=""-->
+<!--            crossorigin="anonymous"></script>-->
+<!--    <script type="text/javascript" async="" src="https://vk.com/js/api/openapi.js?169"></script>-->
+<!--    <link as="script" rel="prefetch" crossorigin="anonymous"-->
+<!--          href="https://static-new.av.by/app/_next/static/chunks/6133-e9d7b5771eb4d70b77c2.js">-->
+<!--    <link as="script" rel="prefetch" crossorigin="anonymous"-->
+<!--          href="https://static-new.av.by/app/_next/static/chunks/pages/%5B%5B...landingOrIndexPage%5D%5D-9c8a00963c64e56280ac.js">-->
+</head>
+<body>
+
+</body>
+</html>
