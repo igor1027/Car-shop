@@ -16,10 +16,19 @@ public interface CarServiceInterface {
 
     Optional<Car> getCarById(long id, User user);
 
+    Car update (long id, User user, String mark, String model, String fuel,
+                String color, Integer year,  Integer kilometers,
+                String transmission,  Integer price, Double engineCapacity,
+                String image, String body,String description) throws CarNotFoundServiceException;
+
     Car deleteCar(long id, User user) throws CarNotFoundServiceException;
+
+    Page<Car> findAllByMark(String mark, Pageable pageable);
 
     Page<Car> findAllCar(Pageable pageable);
 
     List<Car> findByIdAndCreator(User user);
+
+    Page<Car> findPaginated (int pageNo, int pageSize, String sortField, String sortDirection);
 
 }

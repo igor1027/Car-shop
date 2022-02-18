@@ -19,6 +19,7 @@ public interface CarRepository extends JpaRepository<Car,Long>{
     Optional<Car> findByIdAndCreator(long id, User user);
     List<Car> findAllByCreator(User user);
 
+    Page<Car> findAllByMark(String mark, Pageable pageable);
     @Override
     Optional<Car> findById(Long id);
 }

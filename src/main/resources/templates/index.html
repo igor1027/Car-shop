@@ -25,42 +25,110 @@
                     <div class="overlay overlay--area overlay--animated" hidden="">
                         <div class="overlay__spinner"></div>
                     </div>
-                    <form>
-                        <div class="filter">
-                            <div class="filter__title">Поиск по параметрам</div>
-                            <div class="filter__model">
-                                <div class="filter-models">
-                                    <div class="filter-models__add">
-                                    </div>
-                                    <div class="filter-models__row">
-                                        <div class="filter-models__column">
-                                            <div class="dropdown" id="p-6-0-2-brand">
-                                                <div class="dropdown__controls">
-                                                    <div class="dropdown__box">
-                                                        <ul class="dropdown-list">
-                                                            <li class="dropdown__listitem">
-                                                                <button class="dropdown__listbutton" type="button"
-                                                                        tabindex="-1">Любой
-                                                                </button>
-                                                            </li>
-                                                            <li class="dropdown__listitem">
-                                                                <button class="dropdown__listbutton dropdown__listbutton--focus"
-                                                                        type="button" data-item-label="Acura"
-                                                                        data-parent="false" tabindex="-1"
-                                                                        data-property-label="Марка"
-                                                                        data-property-name="brand">Acura
-                                                                </button>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="catalog catalog--rich">
+                        <div class="catalog__list">
+                            <ul class="catalog__items">
+                                <li class="catalog__item"><a class="catalog__link" th:href="@{'/Alfa-Romeo/page/' + ${currentPage} + '?sortField=price&sortDir=' + ${reverseSortDir}}"><span
+                                        class="catalog__title">Alfa Romeo</span></a>
+                                </li>
+                                <li class="catalog__item"><a class="catalog__link" th:href="@{'/Dodge/page/' + ${currentPage} + '?sortField=price&sortDir=' + ${reverseSortDir}}"><span
+                                        class="catalog__title">Dodge</span></a>
+                                </li>
+                                <li class="catalog__item"><a class="catalog__link" th:href="@{'/Kia/page/' + ${currentPage} + '?sortField=price&sortDir=' + ${reverseSortDir}}"><span
+                                        class="catalog__title">Kia</span></a>
+                                </li>
+                                <li class="catalog__item"><a class="catalog__link" th:href="@{'/Nissan/page/' + ${currentPage} + '?sortField=price&sortDir=' + ${reverseSortDir}}"><span
+                                        class="catalog__title">Nissan</span></a>
+                                </li>
+                                <li class="catalog__item"><a class="catalog__link" th:href="@{'/Skoda/page/' + ${currentPage} + '?sortField=price&sortDir=' + ${reverseSortDir}}"><span
+                                        class="catalog__title">Skoda</span></a>
+                                </li>
+                            </ul>
+                            <ul class="catalog__items">
+                                <li class="catalog__item"><a class="catalog__link" th:href="@{'/Audi/page/' + ${currentPage} + '?sortField=price&sortDir=' + ${reverseSortDir}}"><span
+                                        class="catalog__title">Audi</span></a>
+                                </li>
+                                <li class="catalog__item"><a class="catalog__link" th:href="@{'/Fiat/page/' + ${currentPage} + '?sortField=price&sortDir=' + ${reverseSortDir}}"><span
+                                        class="catalog__title">Fiat</span></a>
+                                </li>
+                                <li class="catalog__item"><a class="catalog__link" th:href="@{'/Lada/page/' + ${currentPage} + '?sortField=price&sortDir=' + ${reverseSortDir}}"><span
+                                        class="catalog__title">Lada (ВАЗ)</span></a>
+                                </li>
+                                <li class="catalog__item"><a class="catalog__link" th:href="@{'/Opel/page/' + ${currentPage} + '?sortField=price&sortDir=' + ${reverseSortDir}}"><span
+                                        class="catalog__title">Opel</span></a>
+                                </li>
+                                <li class="catalog__item"><a class="catalog__link" th:href="@{'/Subaru/page/' + ${currentPage} + '?sortField=price&sortDir=' + ${reverseSortDir}}"><span
+                                        class="catalog__title">Subaru</span></a>
+                                </li>
+                            </ul>
+                            <ul class="catalog__items">
+                                <li class="catalog__item"><a class="catalog__link" th:href="@{'/BMW/page/' + ${currentPage} + '?sortField=price&sortDir=' + ${reverseSortDir}}"><span
+                                        class="catalog__title">BMW</span></a>
+                                </li>
+                                <li class="catalog__item"><a class="catalog__link" th:href="@{'/Ford/page/' + ${currentPage} + '?sortField=price&sortDir=' + ${reverseSortDir}}"><span
+                                        class="catalog__title">Ford</span></a>
+                                </li>
+                                <li class="catalog__item"><a class="catalog__link" th:href="@{'/Lexus/page/' + ${currentPage} + '?sortField=price&sortDir=' + ${reverseSortDir}}"><span
+                                        class="catalog__title">Lexus</span></a>
+                                </li>
+                                <li class="catalog__item"><a class="catalog__link" th:href="@{'/Peugeot/page/' + ${currentPage} + '?sortField=price&sortDir=' + ${reverseSortDir}}"><span
+                                        class="catalog__title">Peugeot</span></a>
+                                </li>
+                                <li class="catalog__item"><a class="catalog__link" th:href="@{'/Suzuki/page/' + ${currentPage} + '?sortField=price&sortDir=' + ${reverseSortDir}}"><span
+                                        class="catalog__title">Suzuki</span></a>
+                                </li>
+                            </ul>
+                            <ul class="catalog__items">
+                                <li class="catalog__item"><a class="catalog__link" th:href="@{'/Chevrolet/page/' + ${currentPage} + '?sortField=price&sortDir=' + ${reverseSortDir}}"><span
+                                        class="catalog__title">Chevrolet</span></a>
+                                </li>
+                                <li class="catalog__item"><a class="catalog__link" th:href="@{'/Geely/page/' + ${currentPage} + '?sortField=price&sortDir=' + ${reverseSortDir}}"><span
+                                        class="catalog__title">Geely</span></a>
+                                </li>
+                                <li class="catalog__item"><a class="catalog__link" th:href="@{'/Mazda/page/' + ${currentPage} + '?sortField=price&sortDir=' + ${reverseSortDir}}"><span
+                                        class="catalog__title">Mazda</span></a>
+                                </li>
+                                <li class="catalog__item"><a class="catalog__link" th:href="@{'/Renaut/page/' + ${currentPage} + '?sortField=price&sortDir=' + ${reverseSortDir}}"><span
+                                        class="catalog__title">Renault</span></a>
+                                </li>
+                                <li class="catalog__item"><a class="catalog__link" th:href="@{'/Toyota/page/' + ${currentPage} + '?sortField=price&sortDir=' + ${reverseSortDir}}"><span
+                                        class="catalog__title">Toyota</span></a>
+                                </li>
+                            </ul>
+                            <ul class="catalog__items">
+                                <li class="catalog__item"><a class="catalog__link" th:href="@{'/Chrysler/page/' + ${currentPage} + '?sortField=price&sortDir=' + ${reverseSortDir}}"><span
+                                        class="catalog__title">Chrysler</span><span
+                                        class="catalog__count">433</span></a></li>
+                                <li class="catalog__item"><a class="catalog__link" th:href="@{'/Honda/page/' + ${currentPage} + '?sortField=price&sortDir=' + ${reverseSortDir}}"><span
+                                        class="catalog__title">Honda</span></a>
+                                </li>
+                                <li class="catalog__item"><a class="catalog__link" th:href="@{'/Mercedes-Benz/page/' + ${currentPage} + '?sortField=price&sortDir=' + ${reverseSortDir}}"><span
+                                        class="catalog__title">Mercedes-Benz</span></a></li>
+                                <li class="catalog__item"><a class="catalog__link" th:href="@{'/Rover/page/' + ${currentPage} + '?sortField=price&sortDir=' + ${reverseSortDir}}"><span
+                                        class="catalog__title">Rover</span></a>
+                                </li>
+                                <li class="catalog__item"><a class="catalog__link" th:href="@{'/Volkswagen/page/' + ${currentPage} + '?sortField=price&sortDir=' + ${reverseSortDir}}"><span
+                                        class="catalog__title">Volkswagen</span></a></li>
+                            </ul>
+                            <ul class="catalog__items">
+                                <li class="catalog__item"><a class="catalog__link" th:href="@{'/Citroen/page/' + ${currentPage} + '?sortField=price&sortDir=' + ${reverseSortDir}}"><span
+                                        class="catalog__title">Citroen</span><span
+                                        class="catalog__count">1517</span></a></li>
+                                <li class="catalog__item"><a class="catalog__link" th:href="@{'/Hyundai/page/' + ${currentPage} + '?sortField=price&sortDir=' + ${reverseSortDir}}"><span
+                                        class="catalog__title">Hyundai</span><span
+                                        class="catalog__count">1167</span></a></li>
+                                <li class="catalog__item"><a class="catalog__link" th:href="@{'/Mitsubishi/page/' + ${currentPage} + '?sortField=price&sortDir=' + ${reverseSortDir}}"><span
+                                        class="catalog__title">Mitsubishi</span></a>
+                                </li>
+                                <li class="catalog__item"><a class="catalog__link" th:href="@{'/SEAT/page/' + ${currentPage} + '?sortField=price&sortDir=' + ${reverseSortDir}}"><span
+                                        class="catalog__title">SEAT</span></a>
+                                </li>
+                                <li class="catalog__item"><a class="catalog__link" th:href="@{'/Volvo/page/' + ${currentPage} + '?sortField=price&sortDir=' + ${reverseSortDir}}"><span
+                                        class="catalog__title">Volvo</span></a>
+                                </li>
+                            </ul>
                         </div>
-                    </form>
+                    </div>
                 </div>
                 <div class="overlay-container" aria-busy="false">
                     <div class="overlay overlay--area overlay--animated" hidden="">
@@ -74,61 +142,22 @@
                             <div class="listing__header"><h3 class="listing__title"></h3>
                                 <div class="listing__sort">
                                     <div class="dropdown">
-                                        <div class="dropdown__controls"><label class="dropdown__label"
-                                                                               for="#">Сначала</label>
+                                        <div class="dropdown__controls"><label class="dropdown__label">Сортировать
+                                            по: </label>
                                             <div class="dropdown__box">
-                                                <button aria-pressed="false"
-                                                        class="dropdown__control dropdown__control--active dropdown-link"
-                                                        title="актуальные" type="button"><span
-                                                        class="dropdown-link__value">актуальные</span></button>
-                                                <ul class="dropdown-list">
-                                                    <li class="dropdown__listitem">
-                                                        <button class="dropdown__listbutton dropdown__listbutton--selected"
-                                                                type="button" data-item-label="актуальные"
-                                                                data-parent="false">актуальные
-                                                        </button>
-                                                    </li>
-                                                    <li class="dropdown__listitem">
-                                                        <button class="dropdown__listbutton" type="button"
-                                                                data-item-label="дешёвые" data-parent="false">дешёвые
-                                                        </button>
-                                                    </li>
-                                                    <li class="dropdown__listitem">
-                                                        <button class="dropdown__listbutton" type="button"
-                                                                data-item-label="дорогие" data-parent="false">дорогие
-                                                        </button>
-                                                    </li>
-                                                    <li class="dropdown__listitem">
-                                                        <button class="dropdown__listbutton" type="button"
-                                                                data-item-label="новые объявления" data-parent="false">
-                                                            новые объявления
-                                                        </button>
-                                                    </li>
-                                                    <li class="dropdown__listitem">
-                                                        <button class="dropdown__listbutton" type="button"
-                                                                data-item-label="старые объявления" data-parent="false">
-                                                            старые объявления
-                                                        </button>
-                                                    </li>
-                                                    <li class="dropdown__listitem">
-                                                        <button class="dropdown__listbutton" type="button"
-                                                                data-item-label="с наименьшим пробегом"
-                                                                data-parent="false">с наименьшим пробегом
-                                                        </button>
-                                                    </li>
-                                                    <li class="dropdown__listitem">
-                                                        <button class="dropdown__listbutton" type="button"
-                                                                data-item-label="новые по году" data-parent="false">
-                                                            новые по году
-                                                        </button>
-                                                    </li>
-                                                    <li class="dropdown__listitem">
-                                                        <button class="dropdown__listbutton" type="button"
-                                                                data-item-label="старые по году" data-parent="false">
-                                                            старые по году
-                                                        </button>
-                                                    </li>
-                                                </ul>
+                                                <div class="btn-group" role="group">
+                                                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                                        <li><a class="dropdown-item"
+                                                               th:href="@{'/page/' + ${currentPage} + '?sortField=price&sortDir=' + ${reverseSortDir}}">По
+                                                            цене</a></li>
+                                                        <li><a class="dropdown-item"
+                                                               th:href="@{'/page/' + ${currentPage} + '?sortField=kilometers&sortDir=' + ${reverseSortDir}}">По
+                                                            пробегу</a></li>
+                                                        <li><a class="dropdown-item"
+                                                               th:href="@{'/page/' + ${currentPage} + '?sortField=year&sortDir=' + ${reverseSortDir}}">По
+                                                            году</a></li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -139,20 +168,18 @@
                                     <div class="listing-item listing-item--color listing-item--top">
                                         <div class="listing-item__wrap">
                                             <div class="listing-item__photo"><img height="150" width="200"
-                                                    class=" ls-is-cached lazyloaded"
-                                                    th:src="${car.image}">
+                                                                                  class=" ls-is-cached lazyloaded"
+                                                                                  th:src="${car.image}">
                                             </div>
                                             <div class="listing-item__about"><h3 class="listing-item__title"><a
-                                                    class="listing-item__link" th:href="@{/car/{id}(id=${car.id})}"><span
-                                                    class="link-text" th:text="${car.mark}+' '+${car.model}"></span></a></h3>
-                                                <div class="listing-item__info">
-                                                    <div class="listing-item__location">Минск</div>
-                                                    <div class="listing-item__date">час назад</div>
-                                                </div>
+                                                    class="listing-item__link"
+                                                    th:href="@{/car/{id}(id=${car.id})}"><span
+                                                    class="link-text" th:text="${car.mark}+' '+${car.model}"></span></a>
+                                            </h3>
                                             </div>
                                             <div class="listing-item__params">
                                                 <div th:text="${car.year}+ ' г.'"></div>
-                                                <div th:text="${car.fuel}+', '+${car.engineCapacity} + ' л,' + ${car.body}">автомат, 4.4&nbsp;л, бензин, лифтбек</div>
+                                                <div th:text="${car.fuel}+', '+${car.engineCapacity} + ' л,' + ${car.body}"></div>
                                                 <div th:text="${car.kilometers}+' км.'"></div>
                                             </div>
                                             <div class="listing-item__prices">
@@ -164,11 +191,21 @@
                             </div>
                             <div class="listing__pages">
                                 <div class="paging">
-                                    <div class="paging__button"><a class="button button--default" rel="next"
-                                                                   role="button"
-                                                                   href="/filter?price_currency=2&amp;page=2"><span
-                                            class="button__text">Показать еще</span></a></div>
-                                    <div class="paging__text">На странице 25 объявлений из 41 315</div>
+                                    <!--                                    <div class="paging__button"><a class="button button&#45;&#45;default" rel="next"-->
+                                    <!--                                                                   role="button"-->
+                                    <!--                                                                   th:if="${currentPage < totalPages}"-->
+                                    <!--                                                                   th:href="@{'/page/' + ${currentPage + 1}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">Показать следующие<span-->
+                                    <!--                                            class="button__text" th:unless="${currentPage < totalPages}">Показать следующие</span></a></div>-->
+                                    <div class="paging__button"><span class="button button--default"
+                                                                      th:each="i: ${#numbers.sequence(1, totalPages)}"> <a
+                                            class="button__text" rel="next"
+                                            role="button"
+                                            th:if="${currentPage != i}"
+                                            th:href="@{'/page/' + ${i}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">[[${i}]]</a><span
+                                            class="button__text" th:unless="${currentPage != i}">[[${i}]]</span></span>
+                                    </div>
+
+                                    <div class="paging__text">На странице 5 объявлений из [[${totalItems}]]</div>
                                 </div>
                             </div>
                         </div>
@@ -178,175 +215,5 @@
         </div>
     </div>
 </main>
-
-
-<!--<div class="layout__content.overlay-container">-->
-<!--<div class="overlay-container" aria-busy="false">-->
-<!--    <div class="overlay overlay&#45;&#45;area overlay&#45;&#45;animated" hidden="">-->
-<!--        <div class="overlay__spinner"></div>-->
-<!--    </div>-->
-<!--    <div class="break break&#45;&#45;zone929">-->
-<!--        <div id="adfox_156328173233517757"></div>-->
-<!--    </div>-->
-<!--    <div class="listing">-->
-<!--        <div class="listing__container">-->
-<!--            <div class="listing__header"><h3 class="listing__title">Найдено 41 315 объявлений</h3>-->
-<!--                <div class="listing__sort">-->
-<!--                    <div class="dropdown">-->
-<!--                        <div class="dropdown__controls"><label class="dropdown__label" >Сначала</label>-->
-<!--                            <div class="dropdown__box">-->
-<!--                                <button aria-pressed="false"-->
-<!--                                        class="dropdown__control dropdown__control&#45;&#45;active dropdown-link"-->
-<!--                                        title="актуальные" type="button"><span-->
-<!--                                        class="dropdown-link__value">актуальные</span></button>-->
-<!--                                <ul class="dropdown-list">-->
-<!--                                    <li class="dropdown__listitem">-->
-<!--                                        <button class="dropdown__listbutton dropdown__listbutton&#45;&#45;selected"-->
-<!--                                                type="button" data-item-label="актуальные" data-parent="false">-->
-<!--                                            актуальные-->
-<!--                                        </button>-->
-<!--                                    </li>-->
-<!--                                    <li class="dropdown__listitem">-->
-<!--                                        <button class="dropdown__listbutton" type="button" data-item-label="дешёвые"-->
-<!--                                                data-parent="false">дешёвые-->
-<!--                                        </button>-->
-<!--                                    </li>-->
-<!--                                    <li class="dropdown__listitem">-->
-<!--                                        <button class="dropdown__listbutton" type="button" data-item-label="дорогие"-->
-<!--                                                data-parent="false">дорогие-->
-<!--                                        </button>-->
-<!--                                    </li>-->
-<!--                                    <li class="dropdown__listitem">-->
-<!--                                        <button class="dropdown__listbutton" type="button"-->
-<!--                                                data-item-label="новые объявления" data-parent="false">новые объявления-->
-<!--                                        </button>-->
-<!--                                    </li>-->
-<!--                                    <li class="dropdown__listitem">-->
-<!--                                        <button class="dropdown__listbutton" type="button"-->
-<!--                                                data-item-label="старые объявления" data-parent="false">старые-->
-<!--                                            объявления-->
-<!--                                        </button>-->
-<!--                                    </li>-->
-<!--                                    <li class="dropdown__listitem">-->
-<!--                                        <button class="dropdown__listbutton" type="button"-->
-<!--                                                data-item-label="с наименьшим пробегом" data-parent="false">с наименьшим-->
-<!--                                            пробегом-->
-<!--                                        </button>-->
-<!--                                    </li>-->
-<!--                                    <li class="dropdown__listitem">-->
-<!--                                        <button class="dropdown__listbutton" type="button"-->
-<!--                                                data-item-label="новые по году" data-parent="false">новые по году-->
-<!--                                        </button>-->
-<!--                                    </li>-->
-<!--                                    <li class="dropdown__listitem">-->
-<!--                                        <button class="dropdown__listbutton" type="button"-->
-<!--                                                data-item-label="старые по году" data-parent="false">старые по году-->
-<!--                                        </button>-->
-<!--                                    </li>-->
-<!--                                </ul>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="listing__pages" hidden="">-->
-<!--                <div class="paging">-->
-<!--                    <div class="paging__text">На странице 25 объявлений из 41 315</div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div>-->
-<!--                <div class="listing__items">-->
-<!--                    <div class="listing-item listing-item&#45;&#45;color listing-item&#45;&#45;top">-->
-<!--                        <div class="listing-item__wrap">-->
-<!--                            <div class="listing-item__photo"><img alt="Audi A4 B6, 2002&nbsp;г." height="150"-->
-<!--                                                                  width="200" class="lazyload"-->
-<!--                                                                  data-src="https://avcdn.av.by/advertpreview/0000/5638/7001.jpeg"-->
-<!--                                                                  data-srcset="https://avcdn.av.by/advertmedium/0000/5638/7000.jpeg 2x"-->
-<!--                                                                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/vbzfwAJUgPIVbifMQAAAABJRU5ErkJggg==">-->
-<!--                            </div>-->
-<!--                            <div class="listing-item__about"><h3 class="listing-item__title"><a-->
-<!--                                    class="listing-item__link" href="/audi/a4/100841215"><span class="link-text">Audi A4 B6</span></a>-->
-<!--                            </h3>-->
-<!--                                <div class="listing-item__badges">-->
-<!--                                    <div class="badge badge&#45;&#45;top">-->
-<!--                                        <div class="badge__label" role="button">Топ</div>-->
-<!--                                        <div class="badge__popover">-->
-<!--                                            <div class="badge__title">Объявление в ТОПе</div>-->
-<!--                                            <div class="badge__description">Поднялось выше остальных и&nbsp;собирает-->
-<!--                                                больше просмотров-->
-<!--                                            </div>-->
-<!--                                            <div class="badge__action"><a href="https://av.by/pages/promo"-->
-<!--                                                                          target="_blank"-->
-<!--                                                                          class="button button&#45;&#45;warning">Способы-->
-<!--                                                ускорения продажи</a></div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                <div class="listing-item__info">-->
-<!--                                    <div class="listing-item__location">Минск</div>-->
-<!--                                    <div class="listing-item__date">5 часов назад</div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <div class="listing-item__params">-->
-<!--                                <div>2002&nbsp;г.</div>-->
-<!--                                <div>автомат, 1.8&nbsp;л, бензин, седан</div>-->
-<!--                                <div><span>220 000&nbsp;км</span></div>-->
-<!--                            </div>-->
-<!--                            <div class="listing-item__prices">-->
-<!--                                <div class="listing-item__price">15 569&nbsp;р.</div>-->
-<!--                                <div class="listing-item__priceusd">≈&nbsp;5 999&nbsp;$</div>-->
-<!--                            </div>-->
-<!--                            <div class="listing-item__controls">-->
-<!--                                <button class="bookmark" title="Добавить в закладки" type="button">-->
-<!--                                    <svg width="32" height="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"-->
-<!--                                         aria-hidden="true" fill="currentcolor">-->
-<!--                                        <path class="stroke"-->
-<!--                                              d="M15.5 6h-7c-.274 0-.5.226-.5.5v9.757l3.981-2.661L16 16.269V6.5c0-.274-.226-.5-.5-.5zM7 4h10c.549 0 1 .451 1 1v14.068a.503.503 0 0 1-.777.416L11.984 16l-5.206 3.48A.5.5 0 0 1 6 19.064V5c0-.549.451-1 1-1z"></path>-->
-<!--                                        <path class="fill"-->
-<!--                                              d="M7 4h10c.549 0 1 .451 1 1v14.068a.505.505 0 0 1-.777.416L11.984 16l-5.206 3.48A.5.5 0 0 1 6 19.064V5c0-.549.451-1 1-1z"></path>-->
-<!--                                    </svg>-->
-<!--                                </button>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="listing__pages">-->
-<!--                <div class="paging">-->
-<!--                    <div class="paging__button"><a class="button button&#45;&#45;default" rel="next" role="button"-->
-<!--                                                   href="/filter?price_currency=2&amp;page=2"><span-->
-<!--                            class="button__text">Показать еще</span></a></div>-->
-<!--                    <div class="paging__text">На странице 25 объявлений из 41 315</div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="container mt-5 mb-5" th:each="car:${car}">-->
-<!--    <div class="d-flex justify-content-center row">-->
-<!--        <div class="col-md-10">-->
-<!--            <div class="row p-2 bg-white border rounded">-->
-<!--                <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" th:src="${car.image}"></div>-->
-<!--                <div class="col-md-6 mt-1">-->
-<!--                    <h5 th:text="${car.mark}"></h5> <h5 th:text="${car.model}"></h5>-->
-<!--                    <div class="d-flex flex-row">-->
-<!--                        <div class="ratings mr-2">Fuel: </i></div><span th:text="${car.fuel}"></span>-->
-<!--                    </div>-->
-<!--                    <div class="mt-1 mb-1 spec-1"><span>Color: </span><span class="dot"></span><span th:text="${car.color}"></span><span class="dot"></span></div>-->
-<!--                    <div class="mt-1 mb-1 spec-1"><span>Year of issue: </span><span class="dot"></span><span th:text="${car.year}"></span><span class="dot"></span><br></div>-->
-<!--                    <p class="text-justify text-truncate para mb-0"><br></p>-->
-<!--                </div>-->
-<!--                <div class="align-items-center align-content-center col-md-3 border-left mt-1">-->
-<!--                    <div class="d-flex flex-row align-items-center">-->
-<!--                        <h4 class="mr-1" th:text="${car.price}"></h4><h4>$</h4><span class="strike-text"></span>-->
-<!--                    </div>-->
-<!--                    <h6 class="text-success"></h6>-->
-<!--                    <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm" type="button">Details</button></div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
 </body>
 </html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8">
+    <title>Update car</title>
+    <th:block th:include="static/fragment/head :: head"></th:block>
+
+</head>
+<body>
+<div th:replace="header :: content"></div>
+
+<div class="container">
+    <div class="row justify-content-center mt-4">
+        <div class="col-sm-4">
+            <form th:object="${updateCar}" th:method="post">
+                <h1>Registration</h1>
+                <div class="mb-3">
+                    <select type="text" class="form-control" th:value="${updateCar.mark}" th:field="*{mark}" placeholder="Марка"
+                            aria-describedby="usernameHelp" required>
+                        <option type="text" value="Alfa-Romeo">Alfa Romeo</option>
+                        <option type="text" value="Audi">Audi</option>
+                        <option type="text" value="BMW">BMW</option>
+                        <option type="text" value="Chevrolet">Chevrolet</option>
+                        <option type="text" value="Chrysler">Chrysler</option>
+                        <option type="text" value="Citroen">Citroen</option>
+                        <option type="text" value="Dodge">Dodge</option>
+                        <option type="text" value="Fiat">Fiat</option>
+                        <option type="text" value="Ford">Ford</option>
+                        <option type="text" value="Geely">Geely</option>
+                        <option type="text" value="Honda">Honda</option>
+                        <option type="text" value="Hyndai">Hyndai</option>
+                        <option type="text" value="Kia">Kia</option>
+                        <option type="text" value="Lada">Lada</option>
+                        <option type="text" value="Lexus">Lexus</option>
+                        <option type="text" value="Mazda">Mazda</option>
+                        <option type="text" value="Mercedes-Benz">Mercedes-Benz</option>
+                        <option type="text" value="Mitsubishi">Mitsubishi</option>
+                        <option type="text" value="Nissan">Nissan</option>
+                        <option type="text" value="Opel">Opel</option>
+                        <option type="text" value="Peugeot">Peugeot</option>
+                        <option type="text" value="Renaut">Renaut</option>
+                        <option type="text" value="Rover">Rover</option>
+                        <option type="text" value="Skoda">Skoda</option>
+                        <option type="text" value="Subaru">Subaru</option>
+                        <option type="text" value="Toyota">Toyota</option>
+                        <option type="text" value="Volkswagen">Volkswagen</option>
+                        <option type="text" value="Volvo">Volvo</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" th:value="${updateCar.model}"  th:field="*{model}" placeholder="Модель"
+                           aria-describedby="usernameHelp" required/>
+                    <!--                    <div id="usernameHelp" class="form-text">-->
+                    <!--                        <p th:if="${#fields.hasErrors('email')}" style="color: red" th:errors="*{email}"></p>-->
+                    <!--                        <p th:if="${message == true}" style="color:red">Email already exist</p>-->
+                    <!--                    </div>-->
+                </div>
+                <div class="mb-3">
+                    <select type="text" class="form-control" th:value="${updateCar.body}" th:field="*{body}" placeholder="Тип кузова"
+                            aria-describedby="usernameHelp" required>
+                        <option type="text" value="Седан">Седан</option>
+                        <option type="text" value="Универсал">Универсал</option>
+                        <option type="text" value="Купе">Купе</option>
+                        <option type="text" value="Внедорожник">Внедорожник</option>
+                        <option type="text" value="Хэтчбек">Хэтчбек</option>
+
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <select type="text" class="form-control" th:value="${updateCar.fuel}" th:field="*{fuel}" placeholder="Тип топлива"
+                            aria-describedby="usernameHelp" required>
+                        <option type="text" value="бензин">Бензин</option>
+                        <option type="text" value="дизель">Дизель</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <select type="text" class="form-control" th:value="${updateCar.color}" th:field="*{color}" placeholder="Цвет"
+                            aria-describedby="usernameHelp" required>
+                        <option type="text" value="белый">белый</option>
+                        <option type="text" value="бордовый">бордовый</option>
+                        <option type="text" value="желтый">желтый</option>
+                        <option type="text" value="зеленый">зеленый</option>
+                        <option type="text" value="коричневый">коричневый</option>
+                        <option type="text" value="красный">красный</option>
+                        <option type="text" value="оранжевый">оранжевый</option>
+                        <option type="text" value="серебрисный">серебрисный</option>
+                        <option type="text" value="серый">серый</option>
+                        <option type="text" value="синий">синий</option>
+                        <option type="text" value="фиолетовый">фиолетовый</option>
+                        <option type="text" value="черный">черный</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <input type="number" class="form-control" th:value="${updateCar.year}" th:field="*{year}" placeholder="Год выпуска"
+                           aria-describedby="usernameHelp" required/>
+                    <!--                    <div id="usernameHelp" class="form-text">-->
+                    <!--                        <p th:if="${#fields.hasErrors('email')}" style="color: red" th:errors="*{email}"></p>-->
+                    <!--                        <p th:if="${message == true}" style="color:red">Email already exist</p>-->
+                    <!--                    </div>-->
+                </div>
+                <div class="mb-3">
+                    <input type="number" class="form-control" th:value="${updateCar.kilometers}" th:field="*{kilometers}" placeholder="Пробег"
+                           aria-describedby="usernameHelp" required/>
+                    <!--                    <div id="usernameHelp" class="form-text">-->
+                    <!--                        <p th:if="${#fields.hasErrors('email')}" style="color: red" th:errors="*{email}"></p>-->
+                    <!--                        <p th:if="${message == true}" style="color:red">Email already exist</p>-->
+                    <!--                    </div>-->
+                </div>
+                <div class="mb-3">
+                    <select type="text" class="form-control" th:value="${updateCar.transmission}" th:field="*{transmission}" placeholder="Привод"
+                            aria-describedby="usernameHelp" required>
+                        <option type="text" value="Передний привод">Передний привод</option>
+                        <option type="text" value="Задний привод">Задний привод</option>
+                        <option type="text" value="Полный привод">Полный привод</option>
+
+                    </select>
+
+                </div>
+                <div class="mb-3">
+                    <input type="number" class="form-control" th:value="${updateCar.price}" th:field="*{price}" placeholder="Цена"
+                           aria-describedby="usernameHelp" required/>
+                    <!--                    <div id="usernameHelp" class="form-text">-->
+                    <!--                        <p th:if="${#fields.hasErrors('email')}" style="color: red" th:errors="*{email}"></p>-->
+                    <!--                        <p th:if="${message == true}" style="color:red">Email already exist</p>-->
+                    <!--                    </div>-->
+                </div>
+                <div class="mb-3">
+                    <input type="number" min="1.0" max="9.0" value="1,0" step="0.1" class="form-control" th:value="${updateCar.engineCapacity}" th:field="*{engineCapacity}" placeholder="Объем двигателя"
+                           aria-describedby="usernameHelp" required/>
+                    <!--                    <div id="usernameHelp" class="form-text">-->
+                    <!--                        <p th:if="${#fields.hasErrors('email')}" style="color: red" th:errors="*{email}"></p>-->
+                    <!--                        <p th:if="${message == true}" style="color:red">Email already exist</p>-->
+                    <!--                    </div>-->
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" th:value="${updateCar.image}" th:field="*{image}" placeholder="Фото"
+                           aria-describedby="usernameHelp" required/>
+                    <!--                    <div id="usernameHelp" class="form-text">-->
+                    <!--                        <p th:if="${#fields.hasErrors('email')}" style="color: red" th:errors="*{email}"></p>-->
+                    <!--                        <p th:if="${message == true}" style="color:red">Email already exist</p>-->
+                    <!--                    </div>-->
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" th:value="${updateCar.description}" th:field="*{description}" placeholder="Описание"
+                           aria-describedby="usernameHelp" required/>
+                    <!--                    <div id="usernameHelp" class="form-text">-->
+                    <!--                        <p th:if="${#fields.hasErrors('email')}" style="color: red" th:errors="*{email}"></p>-->
+                    <!--                        <p th:if="${message == true}" style="color:red">Email already exist</p>-->
+                    <!--                    </div>-->
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-5">
+                        <button type="submit" class="btn btn-primary">Create ad</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

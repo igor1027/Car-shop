@@ -10,9 +10,12 @@ import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 import java.util.Optional;
@@ -45,7 +48,7 @@ public class CarService implements CarServiceInterface {
         return carRepository.findByIdAndCreator(id, user);
     }
 
-    public Optional<Car> id(long id){
+    public Optional<Car> findByid(long id){
         return carRepository.findById(id);
     }
 
@@ -66,5 +69,51 @@ public class CarService implements CarServiceInterface {
     @Override
     public List<Car> findByIdAndCreator(User user) {
         return carRepository.findAllByCreator(user);
+    }
+
+    @Override
+    public Page<Car> findPaginated(int pageNo, int pageSize, String sortField, String sortDirection){
+        Sort sort = sortDirection.equalsIgnoreCase(Sort.Direction.ASC.name()) ? Sort.by(sortField).ascending() :
+                Sort.by(sortField).descending();
+
+        Pageable pageable = PageRequest.of(pageNo - 1, pageSize, sort);
+        return this.carRepository.findAll(pageable);
+    }
+
+    public Page<Car> findPaginatedSortedCar(String mark, int pageNo, int pageSize, String sortField, String sortDirection){
+        Sort sort = sortDirection.equalsIgnoreCase(Sort.Direction.ASC.name()) ? Sort.by(sortField).ascending() :
+                Sort.by(sortField).descending();
+        Pageable pageable = PageRequest.of(pageNo - 1, pageSize, sort);
+        return this.carRepository.findAllByMark(mark,pageable);
+    }
+
+    @Override
+    public Page<Car> findAllByMark(String mark, Pageable pageable) {
+        return carRepository.findAllByMark(mark, pageable);
+    }
+
+    @Override
+    public Car update(long id, User user, String mark, String model, String fuel,
+                       String color, Integer year,  Integer kilometers,
+                       String transmission,  Integer price, Double engineCapacity,
+                       String image, String body,String description) throws CarNotFoundServiceException {
+
+        Car car = carRepository.findById(id).orElseThrow(CarNotFoundServiceException::new);
+
+        car.setMark(mark);
+        car.setModel(model);
+        car.setFuel(fuel);
+        car.setColor(color);
+        car.setYear(year);
+        car.setKilometers(kilometers);
+        car.setTransmission(transmission);
+        car.setPrice(price);
+        car.setEngineCapacity(engineCapacity);
+        car.setImage(image);
+        car.setBody(body);
+        car.setDescription(description);
+
+        log.info("Success update car: {}", car);
+        return carRepository.save(car);
     }
 }
