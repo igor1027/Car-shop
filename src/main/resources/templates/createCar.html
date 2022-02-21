@@ -13,7 +13,7 @@
     <div class="row justify-content-center mt-4">
         <div class="col-sm-4">
             <form action="#" th:action="@{/car/create}" th:object="${newCar}" th:method="post">
-                <h1>Registration</h1>
+                <h1>Create car</h1>
                 <div class="mb-3">
                     <select type="text" class="form-control" th:field="*{mark}" placeholder="Марка"
                            aria-describedby="usernameHelp" required>

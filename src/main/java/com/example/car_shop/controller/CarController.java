@@ -58,13 +58,6 @@ public class CarController {
     @GetMapping("/{id}/update_car")
     public ModelAndView updateCar(@PathVariable long id, @CurrentSecurityContext(expression = "authentication") Authentication authentication,ModelAndView model) throws  DataNotFoundControllerException{
         User user = (User) authentication.getPrincipal();
-//        Optional<Car> newCar = carService.findByid(id);
-//        ArrayList<Car> cars = new ArrayList<>();
-//        newCar.isPresent(cars::add);
-//
-//        model.addObject("updateCar", cars);
-//        model.setViewName("updateCar");
-//        return model;
         Optional<Car> car = carService.findByid(id);
         if(car.isPresent()){
             ModelAndView modelAndView = new ModelAndView("updateCar", "updateCar", car.get());

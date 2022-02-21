@@ -25,11 +25,6 @@ public class IndexController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String home(Pageable pageable, Model model){
-//        model.addAttribute("title", "Cars Catalog");
-//        Page<Car> carsPage = carService.findAllCar(pageable);
-//        model.addAttribute("car", carsPage.getContent());
-
-//        return "index";
         return findPaginated(1, "price", "asc", model);
     }
 
@@ -37,15 +32,6 @@ public class IndexController {
     public String sortedMark(@PathVariable String mark, @PathVariable (value = "pageNo") int pageNo,
                                    @RequestParam("sortField") String sortField,
                                    @RequestParam("sortDir") String sortDir, Pageable pageable, Model model){
-//        ModelAndView modelAndView = new ModelAndView();
-//        Page<Car> cars = carService.findAllByMark(mark, pageable);
-//        model.addAttribute("car", cars.getContent());
-//        modelAndView("")
-//        modelAndView.setViewName("index");
-//
-//        findPaginated(1, "price", "asc", model);
-//        return modelAndView;
-
         int pageSize = 5;
 
         Page<Car> page = carService.findPaginatedSortedCar(mark,pageNo, pageSize, sortField, sortDir);

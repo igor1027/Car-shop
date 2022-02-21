@@ -22,10 +22,11 @@
                 <div class="col-md-6 mt-1">
                     <h5 th:text="${car.mark}"></h5> <h5 th:text="${car.model}"></h5>
                     <div class="d-flex flex-row">
-                        <div class="ratings mr-2"></i></div><span th:text="'Топливо ' +${car.fuel}"></span>
+                        <div class="ratings mr-2"></i></div><span></span>
                     </div>
-                    <div class="mt-1 mb-1 spec-1"><span class="dot"></span><span th:text="'Цвет ' +${car.color}"></span><span class="dot"></span></div>
-                    <div class="mt-1 mb-1 spec-1"><span class="dot"></span><span th:text="'Год ' + ${car.year}"></span><span class="dot"></span><br></div>
+                    <div class="mt-1 mb-1 spec-1"><span class="dot"></span><span th:text="'Топливо: ' +${car.fuel}"></span><span class="dot"></span></div>
+                    <div class="mt-1 mb-1 spec-1"><span class="dot"></span><span th:text="'Цвет: ' +${car.color}"></span><span class="dot"></span></div>
+                    <div class="mt-1 mb-1 spec-1"><span class="dot"></span><span th:text="'Год: ' + ${car.year}"></span><span class="dot"></span><br></div>
                     <p class="text-justify text-truncate para mb-0"><br></p>
                 </div>
                 <div class="align-items-center align-content-center col-md-3 border-left mt-1">
